@@ -1,3 +1,5 @@
+# A1_2 
+
 import math
 
 data = list(input().split())
