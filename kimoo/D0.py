@@ -1,5 +1,5 @@
-k = 10
-n = 11
+k = 19
+n = 10000
 num = 0
 
 def digitSum(num):
