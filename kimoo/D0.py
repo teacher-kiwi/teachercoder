@@ -3,16 +3,13 @@ n = 10000
 num = 0
 
 def digitSum(num):
-    digitSum = 0
-    while num // 10 > 0:
-        digitSum += num % 10
-        num = num // 10
-    return digitSum + num
+    if num < 10:
+        return num
+    return digitSum(num // 10) + num % 10
 
 while n > 0:
     num += 1
-    while digitSum(num) != k:
-        num += 1
-    n -= 1
+    if digitSum(num) == k:
+        n -= 1
     
 print(num)
