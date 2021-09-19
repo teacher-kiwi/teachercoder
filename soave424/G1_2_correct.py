@@ -1,0 +1,5 @@
+a,b = input().split()
+a=int(a)
+b=int(b)
+c=str(a-b)
+print(len(c))
