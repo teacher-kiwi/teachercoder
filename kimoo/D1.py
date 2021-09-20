@@ -2,7 +2,7 @@ data = input().split()
 
 k = int(data[0])
 n = int(data[1])
-num = [0, 0, 0, 0, 0, 0]
+num = [0, 0, 0, 0, 0, 0, 0, 0]
 result = 0
 
 if k > 9:
@@ -32,10 +32,11 @@ def next(num, i):
                 num[j] = sum
                 sum = 0
 
+
 for i in range(n-1):
     next(num, 0)
 
-for i in range(6):
+for i in range(len(num)):
     result += num[i] * (10 ** i)
 
 print(result)
