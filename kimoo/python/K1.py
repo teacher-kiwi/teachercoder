@@ -1,8 +1,11 @@
 import itertools
 
-mapSize = list(map(int, input().split()))
+# mapSize = list(map(int, input().split()))
+r, c = input().split()
 
-map = [list(map(int, input())) for _ in range(mapSize[0])]
+map = [list(map(int, input())) for _ in range(int(r))]
+
+
 # for i in range(mapSize[0]):
 #     data2 = input()
 #     map.append([])
