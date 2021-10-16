@@ -1,29 +1,10 @@
 from itertools import permutations
-import sys
 
 n=int(input())
 lis=list(map(int,input().split()))
-mainlis=[i for i in permutations(range(1,n+1))]
-
-for i in range(len(lis)):
-    for j in range(len(mainlis)):
-        lis[i] == mainlis[j][i]
+mainlis=[list(i) for i in permutations(range(1,n+1))]
 
 
-
-
-'''
-
-cnt=0
-for i in mainlis: 
-    for j in range(n):
-    print(i)
-
-lis=
-cnt=0
-for i in lis:
-    if i[0]!=1 and i[1]!=4 and i[2]!=2 and i[3]!=3:
-      cnt+=1
-print(cnt)
-
-'''
+for k in range(n):
+  mainlis=[i for i in mainlis if i[k]!=lis[k]]
+print(len(mainlis))

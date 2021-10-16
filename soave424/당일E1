@@ -5,6 +5,8 @@ n=int(input())
 lis=list(map(int,input().split()))
 mainlis=[i for i in permutations(range(1,n+1))]
 
+for
+
 '''
 
 cnt=0
