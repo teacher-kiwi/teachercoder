@@ -1,0 +1,26 @@
+{
+  "name": "teachercoder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teacher-kiwi/teachercoder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teacher-kiwi/teachercoder/issues"
+  },
+  "homepage": "https://github.com/teacher-kiwi/teachercoder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
