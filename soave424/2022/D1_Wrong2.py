@@ -17,7 +17,7 @@ def pS2(a):
 
 def pSum(prsum):
   global a, C, R
-  ans=-100
+  ans=-11
   for i in range(R):
     for j in range(C):
       for ii in range(i, R):
