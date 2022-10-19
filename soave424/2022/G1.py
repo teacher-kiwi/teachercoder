@@ -1,9 +1,11 @@
-n=3
-m=7
-mat=[[0,5,7,6,4,1,7],[3,1,4,3,5,10,2],[7,3,7,4,8,2,4]]
 
-target_n=3
-target_m=7
+
+n,m=map(int,input().split())
+mat=[list(map(int,input().split())) for _ in range(n)]
+# mat=[[0,5,7,6,4,1,7],[3,1,4,3,5,10,2],[7,3,7,4,8,2,4]]
+target_n,target_m=map(int,input().split())
+# target_n=3
+# target_m=7
 
 
 dx=[-1,1,0,0]
@@ -13,6 +15,14 @@ visited = [[0 for _ in range(m)] for _ in range(n)]
 x=target_n-1
 y=target_m-1
 max=mat[target_n-1][target_m-1]
+down=[]
+for i in range(4): # 상하좌우 탐색
+  d_nx=x+dx[i]
+  d_ny=y+dy[i]
+  if 0<=d_nx<n and 0<=d_ny<m: #그리드 범위 내 
+    down.append(mat[d_nx][d_ny]) 
+  down.sort()
+
 
 #타겟에서부터 거꾸로 가면서 가능한 거리 내 가장 최소 선택 
 
@@ -35,8 +45,8 @@ def visit_mat(x,y):
   # print(li[0][0])
   if li[0][0]==0 and li[0][1]==0:
     return
-  # elif mat[li[0][0]][li[0][1]]>max:
-  #   visit_mat(target_n-1,target_m-1)
+  if mat[li[0][0]][li[0][1]]>down[1]:
+    visit_mat(target_n-1,target_m-1)
   else:
     visit_mat(li[0][0],li[0][1])
   # print(li[0])
@@ -58,3 +68,4 @@ visit_mat(x,y)
 
 # print(visited)
 print(max)
+print(down)
