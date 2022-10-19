@@ -24,7 +24,6 @@ def paths(mat, route=[], i=0, j=0):
         # 아래로 이동
         if i + 1 < M:
             paths(mat, route, i + 1, j)
- 
         # 오른쪽으로 이동해라
         if j + 1 < N:
             paths(mat, route, i, j + 1)
