@@ -28,4 +28,5 @@ def solve(n: int):
         res %= 10000000
     print(res + 1)
 
+
 solve(n)
